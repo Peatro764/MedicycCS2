@@ -1,0 +1,1 @@
+../../../Global/sql/createCycloConfigTables.sql

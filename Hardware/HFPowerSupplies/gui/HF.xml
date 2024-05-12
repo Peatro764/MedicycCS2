@@ -1,0 +1,25 @@
+<node name="/medicyc/cyclotron/hf">
+<interface name="medicyc.cyclotron.hf.HFInterface">,
+    <method name="Configure">
+        <arg name="name" type="s"/>
+    </method>
+    <method name="SaveConfiguration">
+        <arg name="name" type="s"/>
+    </method>
+    <method name="Startup"> </method>
+    <method name="Shutdown"> </method>
+    <method name="Interrupt"> </method>
+    <signal name="SIGNAL_Error">
+        <arg name="message" type="s"/>
+    </signal>
+    <signal name="SIGNAL_Off"> </signal>
+    <signal name="SIGNAL_PartiallyOn"> </signal>
+    <signal name="SIGNAL_On"> </signal>
+    <signal name="SIGNAL_Ready"> </signal>
+    <signal name="SIGNAL_InProgress"> </signal>
+    <signal name="SIGNAL_Configuration">
+        <arg name="name" type="s"/>
+        <arg name="params" type="s"/>
+    </signal>
+</interface>
+</node>

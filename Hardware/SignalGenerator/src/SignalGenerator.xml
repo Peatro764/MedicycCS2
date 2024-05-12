@@ -1,0 +1,30 @@
+<node name="/medicyc/cyclotron/signalgenerator">
+<interface name="medicyc.cyclotron.SignalGeneratorInterface">,
+    <method name="Ping"> </method>
+    <method name="SetAmplitude">
+        <arg name="db" type="d"/>
+    </method>
+    <method name="SetFrequency">
+        <arg name="mhz" type="d"/>
+    </method>
+    <method name="SetFrequencyCold"> </method>
+    <method name="SetFrequencyStep">
+        <arg name="mhz" type="d"/>
+    </method>
+    <method name="Init"> </method>
+    <method name="IncrementFrequency"> </method>
+    <method name="DecrementFrequency"> </method>
+    <signal name="SIGNAL_Frequency">
+        <arg name="mhz" type="d"/>
+    </signal>
+    <signal name="SIGNAL_FrequencyCold"> </signal>
+    <signal name="SIGNAL_FrequencyBelowCold"> </signal>
+    <signal name="SIGNAL_FrequencyWarm"> </signal>
+    <signal name="SIGNAL_FrequencyAboveWarm"> </signal>
+    <signal name="SIGNAL_Disconnected"> </signal>
+    <signal name="SIGNAL_Connected"> </signal>
+    <signal name="SIGNAL_IOLoad">
+        <arg name="load" type="d"/>
+    </signal>
+</interface>
+</node>

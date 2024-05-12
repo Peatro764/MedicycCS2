@@ -1,0 +1,11 @@
+<RCC>
+<qresource prefix="/">
+    <file>images/LogoCAL.png</file>
+    <file>../../Images/circle-blue-20x20.png</file>
+    <file>../../Images/connected_90x90.png</file>
+    <file>../../Images/disconnected_90x90.png</file>
+    <file>sounds/beep.wav</file>
+    <file>sounds/beep2.wav</file>
+    <file>sounds/errormessage.wav</file>
+</qresource>
+</RCC>

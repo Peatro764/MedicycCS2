@@ -1,0 +1,7 @@
+<RCC>
+<qresource prefix="/">
+    <file>sql/createEnums.sql</file>
+    <file>sql/createCycloConfigTables.sql</file>
+    <file>sql/fillCycloConfigTestData.sql</file>
+  </qresource>
+</RCC>

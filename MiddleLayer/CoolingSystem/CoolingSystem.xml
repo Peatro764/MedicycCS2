@@ -1,0 +1,11 @@
+<node name="/medicyc/cyclotron/middlelayer/coolingsystem">
+<interface name="medicyc.cyclotron.middlelayer.CoolingSystemInterface">,
+    <signal name="SIGNAL_ChannelState">
+        <arg name="name" type="s"/>
+        <arg name="state" type="b"/>
+    </signal>
+    <signal name="SIGNAL_AllCoolingOn"> </signal>
+    <signal name="SIGNAL_AllCoolingOff"> </signal>
+    <signal name="SIGNAL_PartiallyOn"> </signal>
+</interface>
+</node>

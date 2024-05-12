@@ -1,0 +1,18 @@
+<node name="/medicyc/cyclotron/middlelayer/bobine_principale_cycler">
+<interface name="medicyc.cyclotron.middlelayer.BobinePrincipaleCyclerInterface">,
+    <method name="Startup"> </method>
+    <method name="Cycle"> </method>
+    <method name="Shutdown"> </method>
+    <method name="Interrupt"> </method>
+    <method name="Continue"> </method>
+    <signal name="SIGNAL_CyclageStarted"> </signal>
+    <signal name="SIGNAL_CyclageFinished"> </signal>
+    <signal name="SIGNAL_CyclageInterrupted"> </signal>
+    <signal name="SIGNAL_State_Off"> </signal>
+    <signal name="SIGNAL_State_Ready"> </signal>
+    <signal name="SIGNAL_State_Intermediate"> </signal>
+    <signal name="SIGNAL_State_Unknown"> </signal>
+    <signal name="SIGNAL_StartupFinished"> </signal>
+    <signal name="SIGNAL_ShutdownFinished"> </signal>
+</interface>
+</node>

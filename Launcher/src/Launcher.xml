@@ -1,0 +1,39 @@
+<node name="/medicyc/cyclotron/launcher">
+<interface name="medicyc.cyclotron.LauncherInterface">,
+
+<method name="GetProcesses"> </method>
+<method name="GetRealProcesses"> </method>
+<method name="GetRealRequiredProcesses"> </method>
+<method name="StartRealProcesses"> </method>
+<method name="StartRealRequiredProcesses"> </method>
+<method name="StartSimProcesses"> </method>
+<method name="StopProcesses"> </method>
+<method name="StartProcess">
+  <arg name="name" type="s" direction="in"/>
+</method>
+<method name="StopProcess">
+  <arg name="name" type="s" direction="in"/>
+</method>
+<method name="ToggleProcessState">
+  <arg name="name" type="s" direction="in"/>
+</method>
+
+<signal name="SIGNAL_Error">
+   <arg name="message" type="s"/>
+</signal>
+<signal name="SIGNAL_ProcessCreated">
+   <arg name="name" type="s"/>
+</signal>
+<signal name="SIGNAL_ProcessDeleted">
+   <arg name="name" type="s"/>
+</signal>
+<signal name="SIGNAL_ProcessStarted">
+   <arg name="message" type="s"/>
+</signal>
+<signal name="SIGNAL_ProcessStopped">
+   <arg name="message" type="s"/>
+</signal>
+<signal name="SIGNAL_AllRequiredNotRunning"> </signal>
+<signal name="SIGNAL_AllRequiredRunning"> </signal>
+</interface>
+</node>

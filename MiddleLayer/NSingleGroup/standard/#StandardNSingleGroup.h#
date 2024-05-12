@@ -1,0 +1,88 @@
+#ifndef MIDDLELAYER_STANDARDNSINGLEGROUP_H
+#define MIDDLELAYER_STANDARDNSINGLEGROUP_H
+
+#include <vector>
+#include <QSettings>
+#include <QLabel>
+#include <QGridLayout>
+#include <QMap>
+#include <QStateMachine>
+
+#include "nsinglecontroller_interface.h"
+#include "messagelogger_interface.h"
+#include "NSingleRepo.h"
+#include "NSingleSetPoint.h"
+#include "Enumerations.h"
+#include "EquipmentGroupState.h"
+
+/***
+On startup, all available (available=true in nsingle db table) nsingle controllers are created and connected
+On configuration, all listed nsingles are configured to be powered down (enabled=false in equipmentconfig table) or powered up with the given setpoint
+An nsingle not listed in the configuration table will be ignored during any actions
+***/
+
+namespace medicyc::cyclotroncontrolsystem::middlelayer::nsinglegroup::standard {
+
+namespace global = medicyc::cyclotroncontrolsystem::global;
+namespace hardware = medicyc::cyclotroncontrolsystem::hardware;
+namespace repository = medicyc::cyclotroncontrolsystem::repository;
+
+class StandardNSingleGroup : public QObject
+{
+    Q_OBJECT
+
+public:
+    StandardNSingleGroup(QString sub_system, int iteration_delay);
+    ~StandardNSingleGroup();
+
+public slots:
+    void Configure(QString cyclo_config); // dbus
+    void UnConfigure();
+    void QueryConfiguration(); // dbus
+    void Startup(); // dbus
+    void Shutdown(); // dbus
+    void Interrupt(); // dbus
+
+signals:
+    // external
+    void SIGNAL_Configuration(QString cyclo_config);
+    void SIGNAL_State_Off();
+    void SIGNAL_State_Ready();
+    void SIGNAL_State_Intermediate();
+    void SIGNAL_State_Unknown();
+
+    // internal
+    void SIGNAL_CommandStartup();
+    void SIGNAL_CommandShutdown();
+    void SIGNAL_CommandInterrupt();
+    void SIGNAL_Iterate();
+    void SIGNAL_IterationFinished();
+
+private slots:
+    void StartupIteratively();
+    void ShutdownIteratively();
+
+    void ErrorMessage(QString message);
+    void WarningMessage(QString message);
+    void InfoMessage(QString message);
+
+private:
+    bool IsConfigured() const;
+    void SetupStateMachine();
+    void PrintStateChanges(QState *state, QString name);
+
+     QStateMachine sm_;
+     QMap<QString, medicyc::cyclotron::NSingleControllerInterface*> nsingle_controllers_;
+     QMap<QString, hardware::nsingle::NSingleSetPoint> nsingle_setpoints_;
+     QMap<QString, hardware::nsingle::NSingleSetPoint>::iterator iter_;
+     EquipmentGroupState group_state_;
+     QString active_cyclo_config_;
+     repository::NSingleRepo repo_;
+     medicyc::cyclotron::MessageLoggerInterface logger_;
+     QString sub_system_;
+     int iteration_delay_;
+};
+
+}
+
+#endif

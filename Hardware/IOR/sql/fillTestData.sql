@@ -1,0 +1,2 @@
+INSERT INTO IORChannel VALUES('CF8', 0, 1, 4);
+INSERT INTO IORChannel VALUES('CF9', 0, 0, 5);

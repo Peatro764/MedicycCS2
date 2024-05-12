@@ -1,0 +1,54 @@
+<node name="/medicyc/cyclotron/messagelogger">
+<interface name="medicyc.cyclotron.MessageLoggerInterface">,
+<method name="GetMessages">
+    <arg name="from" type="x" direction="in"/>
+    <arg name="to" type="x" direction="in"/>
+ </method>
+<method name="Error">
+  <arg name="datetime" type="x" direction="in"/>
+  <arg name="system" type="s" direction="in"/>
+  <arg name="message" type="s" direction="in"/>
+</method>
+<method name="Warning">
+  <arg name="datetime" type="x" direction="in"/>
+  <arg name="system" type="s" direction="in"/>
+  <arg name="message" type="s" direction="in"/>
+</method>
+<method name="Info">
+  <arg name="datetime" type="x" direction="in"/>
+  <arg name="system" type="s" direction="in"/>
+  <arg name="message" type="s" direction="in"/>
+</method>
+<method name="Debug">
+  <arg name="datetime" type="x" direction="in"/>
+  <arg name="system" type="s" direction="in"/>
+  <arg name="message" type="s" direction="in"/>
+</method>
+<signal name="SIGNAL_Error">
+   <arg name="datetime" type="x"/>
+   <arg name="system" type="s"/>
+   <arg name="message" type="s"/>
+</signal>
+<signal name="SIGNAL_Warning">
+   <arg name="datetime" type="x"/>
+   <arg name="system" type="s"/>
+   <arg name="message" type="s"/>
+</signal>
+<signal name="SIGNAL_Info">
+   <arg name="datetime" type="x"/>
+   <arg name="system" type="s"/>
+   <arg name="message" type="s"/>
+</signal>
+<signal name="SIGNAL_Debug">
+   <arg name="datetime" type="x"/>
+   <arg name="system" type="s"/>
+   <arg name="message" type="s"/>
+</signal>
+<signal name="SIGNAL_RetrievedMessages">
+   <arg name="datetime" type="x"/>
+   <arg name="system" type="s"/>
+   <arg name="type" type="s"/>
+   <arg name="message" type="s"/>
+</signal>  
+</interface>
+</node>

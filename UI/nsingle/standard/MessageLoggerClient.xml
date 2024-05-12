@@ -1,0 +1,19 @@
+<node name="/medicyc/cyclotron/messagelogger">
+<interface name="medicyc.cyclotron.MessageLoggerInterface">,
+<method name="Error">
+  <arg name="datetime" type="x" direction="in"/>
+  <arg name="system" type="s" direction="in"/>
+  <arg name="message" type="s" direction="in"/>
+</method>
+<method name="Warning">
+  <arg name="datetime" type="x" direction="in"/>
+  <arg name="system" type="s" direction="in"/>
+  <arg name="message" type="s" direction="in"/>
+</method>
+<method name="Info">
+  <arg name="datetime" type="x" direction="in"/>
+  <arg name="system" type="s" direction="in"/>
+  <arg name="message" type="s" direction="in"/>
+</method>
+</interface>
+</node>

@@ -1,0 +1,7 @@
+<RCC>
+<qresource prefix="/">
+    <file>../../../Images/circle-blue-20x20.png</file>
+    <file>../../../Images/connected_120x120.png</file>
+    <file>../../../Images/disconnected_120x120.png</file>
+</qresource>
+</RCC>

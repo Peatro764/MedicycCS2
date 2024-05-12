@@ -1,0 +1,22 @@
+<node name="/medicyc/cyclotron/radiationmonitor">
+  <interface name="medicyc.cyclotron.RadiationMonitorInterface">,
+  <method name="StartChargeMeasurement"> </method>
+  <method name="StopChargeMeasurement"> </method>
+  <signal name="SIGNAL_AbortChargeMeasurement"> </signal>
+  <signal name="SIGNAL_MeasurementInProgress"> </signal>
+  <signal name="SIGNAL_MeasurementStopped"> </signal>
+    <signal name="SIGNAL_DoseRate">
+        <arg name="value" type="d"/>
+    </signal>
+    <signal name="SIGNAL_IntegratedChargeOverInterval">
+      <arg name="value" type="d"/>
+    </signal>
+    <signal name="SIGNAL_IntegratedChargeContinous">
+      <arg name="value" type="d"/>
+    </signal> 
+    <signal name="SIGNAL_XRayDetected">
+      <arg name="peak_dose_rate" type="d"/>
+      <arg name="integrated_charge" type="d"/>
+    </signal>
+</interface>
+</node>

@@ -1,0 +1,12 @@
+#ifndef ELECTROMETER_GLOBAL_H
+#define ELECTROMETER_GLOBAL_H
+
+#include <QtCore/QtGlobal>
+
+#if defined(ELECTROMETER_LIB)
+#  define ELECTROMETER_EXPORT Q_DECL_EXPORT
+#else
+#  define ELECTROMETER_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // ELECTROMETER_GLOBAL_H

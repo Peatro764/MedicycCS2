@@ -1,0 +1,25 @@
+CREATE TYPE FINS_MEMORY_AREA AS ENUM('UNKNOWN', 'CIO', 'DM', 'HR');
+
+CREATE TABLE OmronSystem
+(
+  name TEXT NOT NULL PRIMARY KEY
+);
+
+CREATE TABLE OmronChannel
+(
+  name TEXT NOT NULL PRIMARY KEY,
+  system TEXT NOT NULL,
+  node INTEGER NOT NULL,
+  type FINS_MEMORY_AREA NOT NULL,
+  address INTEGER,
+  bit	  INTEGER,
+  impuls  BOOLEAN
+);
+
+CREATE TABLE BarcoMessage
+(
+  id INTEGER NOT NULL PRIMARY KEY,
+  message TEXT NOT NULL,
+  enabled BOOLEAN NOT NULL,
+  severity INTEGER NOT NULL
+);

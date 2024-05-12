@@ -1,0 +1,38 @@
+<RCC>
+<qresource prefix="/">
+    <file>images/LogoCAL.png</file>
+    <file>images/configuration.png</file>
+    <file>images/logo_antoine_lacassagne_unicancer.png</file>
+    <file>../../Images/circle-blue-20x20.png</file>
+    <file>../../Images/connected_90x90.png</file>
+    <file>../../Images/disconnected_90x90.png</file>
+    <file>sounds/AskStartupAll.wav</file>
+    <file>sounds/AskShutdownAll.wav</file>
+    <file>sounds/errormessage.wav</file>
+    <file>sounds/equipmentoff.wav</file>
+    <file>sounds/equipmenton.wav</file>
+    <file>sounds/StartupAllExceptHF.wav</file>
+    <file>sounds/ShutdownAllExceptHF.wav</file>
+    <file>sounds/StartupAll.wav</file>
+    <file>sounds/ShutdownAll.wav</file>
+    <file>sounds/BCStartup.wav</file>
+    <file>sounds/BPStartup.wav</file>
+    <file>sounds/InjectionStartup.wav</file>
+    <file>sounds/EjectionStartup.wav</file>
+    <file>sounds/HFStartup.wav</file>
+    <file>sounds/VDFStartup.wav</file>
+    <file>sounds/SourceStartup.wav</file>
+    <file>sounds/Error.wav</file>
+    <file>sounds/NewConfiguration.wav</file>
+    <file>sounds/BPShutdown.wav</file>
+    <file>sounds/BCShutdown.wav</file>
+    <file>sounds/EjectionShutdown.wav</file>
+    <file>sounds/HFShutdown.wav</file>
+    <file>sounds/InjectionShutdown.wav</file>
+    <file>sounds/SourceShutdown.wav</file>
+    <file>sounds/VDFShutdown.wav</file>
+    <file>sounds/SingleTick.wav</file>
+</qresource>
+</RCC>
+
+

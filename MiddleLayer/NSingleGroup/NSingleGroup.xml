@@ -1,0 +1,20 @@
+<node name="/medicyc/cyclotron/middlelayer/nsinglegroup">
+<interface name="medicyc.cyclotron.middlelayer.NSingleGroupInterface">,
+    <method name="Configure">
+        <arg name="name" type="s"/>
+    </method>
+    <method name="Startup"> </method>
+    <method name="Shutdown"> </method>
+    <method name="Interrupt"> </method>
+    <method name="QueryConfiguration"> </method>
+    <signal name="SIGNAL_Configuration">
+        <arg name="name" type="s"/>
+    </signal>
+    <signal name="SIGNAL_State_Unknown"> </signal>
+    <signal name="SIGNAL_State_Intermediate"> </signal>
+    <signal name="SIGNAL_State_Off"> </signal>
+    <signal name="SIGNAL_State_Ready"> </signal>
+    <signal name="SIGNAL_StartupFinished"> </signal>
+    <signal name="SIGNAL_ShutdownFinished"> </signal>
+</interface>
+</node>

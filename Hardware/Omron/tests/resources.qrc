@@ -1,0 +1,7 @@
+<RCC>
+<qresource prefix="/">
+    <file>sql/createOmronTables.sql</file>
+    <file>sql/fillOmronData.sql</file>
+    <file>sql/fillTestData.sql</file>
+ </qresource>
+</RCC>

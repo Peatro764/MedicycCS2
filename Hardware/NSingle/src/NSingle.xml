@@ -1,0 +1,24 @@
+<node name="/medicyc/cyclotron/nsingle">
+<interface name="medicyc.cyclotron.NSingleInterface">,
+    <method name="On"> </method>
+    <method name="Off"> </method>
+     <method name="Reset"> </method>
+     <signal name="SIGNAL_Connected"> </signal>
+     <signal name="SIGNAL_Disconnected"> </signal>
+     <signal name="SIGNAL_IOLoad">
+         <arg name="load" type="d"/>
+     </signal>
+     <signal name="SIGNAL_On"> </signal>
+     <signal name="SIGNAL_Off"> </signal>
+     <signal name="SIGNAL_Error"> </signal>
+     <signal name="SIGNAL_Ok"> </signal>
+     <signal name="SIGNAL_Channel1Value">
+         <arg name="physical_value" type="d"/>
+         <arg name="polarity" type="b"/>
+     </signald>
+     <signal name="SIGNAL_Channel1SetPoint">
+         <arg name="physical_value" type="d"/>
+         <arg name="polarity" type="b"/>
+     </signal>
+</interface>
+</node>

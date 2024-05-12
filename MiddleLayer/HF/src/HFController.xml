@@ -1,0 +1,41 @@
+<node name="/medicyc/cyclotron/middlelayer/hf">
+<interface name="medicyc.cyclotron.middlelayer.HFControllerInterface">,
+    <method name="Startup"> </method>
+    <method name="Shutdown"> </method>
+    <method name="Interrupt"> </method>
+    <method name="IncNiveau">
+      <arg name="branch" type="i"/>
+    </method>
+    <method name="DecNiveau">
+      <arg name="branch" type="i"/>
+    </method>
+    <method name="IncFrequency"> </method>
+    <method name="DecFrequency"> </method>
+    <method name="SetFrequency">
+    <arg name="mhz" type="d"/>
+    </method>
+    <method name="InitGenerator"> </method>
+    <method name="ReadConfiguration"></method>
+    <signal name="SIGNAL_State_Off"></signal>
+    <signal name="SIGNAL_State_Ready"></signal>
+    <signal name="SIGNAL_State_Intermediate"></signal>
+    <signal name="SIGNAL_State_Unknown"></signal>
+    <signal name="SIGNAL_StartupFinished"></signal>
+    <signal name="SIGNAL_ShutdownFinished"></signal>
+    <signal name="SIGNAL_Niveau_Value">
+        <arg name="branch" type="i"/>
+        <arg name="value" type="d"/>
+    </signal>
+    <signal name="SIGNAL_Niveau_State">
+  	<arg name="branch" type="i"/>
+	<arg name="on" type="b"/>
+    </signal>
+    <signal name="SIGNAL_Dee_Voltage">
+  	<arg name="branch" type="i"/>
+	<arg name="value" type="d"/>
+    </signal>
+    <signal name="SIGNAL_Frequency">
+        <arg name="mhz" type="d"/>
+    </signal>
+</interface>
+</node>

@@ -1,0 +1,11 @@
+<node name="/medicyc/cyclotron/middlelayer/vacuumsystem">
+<interface name="medicyc.cyclotron.middlelayer.VacuumSystemInterface">,
+    <signal name="SIGNAL_ChannelState">
+        <arg name="name" type="s"/>
+        <arg name="state" type="b"/>
+    </signal>
+    <signal name="SIGNAL_AllVacuumOk"> </signal>
+    <signal name="SIGNAL_AllVacuumError"> </signal>
+    <signal name="SIGNAL_VacuumPartiallyOk"> </signal>
+</interface>
+</node>

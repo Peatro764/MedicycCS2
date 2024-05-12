@@ -1,0 +1,12 @@
+<node name="/medicyc/cyclotron/barco">
+<interface name="medicyc.cyclotron.BarcoInterface">,
+    <signal name="SIGNAL_Message">
+        <arg name="message" type="s"/>
+    </signal>
+    <signal name="SIGNAL_IOError">
+        <arg name="message" type="s"/>
+    </signal>
+     <signal name="SIGNAL_Connected"> </signal>
+     <signal name="SIGNAL_Disconnected"> </signal>
+</interface>
+</node>

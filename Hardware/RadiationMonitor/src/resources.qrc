@@ -1,0 +1,7 @@
+<RCC>
+<qresource prefix="/">
+    <file>sql/createRadiationMonitorTables.sql</file>
+    <file>sql/fillRadiationMonitorTables.sql</file>
+     <file>sql/fillRadiationMonitorTestData.sql</file>
+ </qresource>
+</RCC>

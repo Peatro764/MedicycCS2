@@ -1,0 +1,7 @@
+<RCC>
+<qresource prefix="/">
+    <file>sql/createDatabase.sql</file>
+    <file>sql/createTables.sql</file>
+    <file>sql/fillTables.sql</file>
+ </qresource>
+</RCC>

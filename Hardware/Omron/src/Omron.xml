@@ -1,0 +1,28 @@
+<node name="/medicyc/cyclotron/omron">
+<interface name="medicyc.cyclotron.OmronInterface">,
+    <method name="Ping"> </method>
+    <method name="ReadChannel">
+        <arg name="channel" type="s" direction="in"/>
+    </method>
+    <method name="WriteChannel">
+        <arg name="channel" type="s" direction="in"/>
+        <arg name="content" type="b" direction="in"/>
+    </method>
+    <signal name="SIGNAL_IOLoad">
+        <arg name="load" type="d"/>
+    </signal>
+    <signal name="SIGNAL_BitRead">
+        <arg name="channel" type="s"/>
+        <arg name="content" type="b"/>
+    </signal>
+    <signal name="SIGNAL_BitWritten">
+        <arg name="channel" type="s"/>
+        <arg name="content" type="b"/>
+    </signal>
+    <signal name="SIGNAL_IOError">
+        <arg name="message" type="s"/>
+    </signal>
+     <signal name="SIGNAL_Connected"> </signal>
+     <signal name="SIGNAL_Disconnected"> </signal>
+</interface>
+</node>

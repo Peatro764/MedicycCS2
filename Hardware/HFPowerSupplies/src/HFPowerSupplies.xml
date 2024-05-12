@@ -1,0 +1,34 @@
+<node name="/medicyc/cyclotron/hfpowersupplies">
+<interface name="medicyc.cyclotron.HFPowerSuppliesInterface">,
+    <method name="Startup"> </method>
+    <method name="Shutdown"> </method>
+    <method name="Interrupt"> </method>
+    <method name="PreAmplisOn"> </method>
+    <method name="PreAmplisOff"> </method>
+    <method name="AmplisOn"> </method>
+    <method name="AmplisOff"> </method>
+    <method name="ReadTopLevelDeviceStatus"> </method>
+    <method name="ReadBottomLevelDeviceStatus"> </method>
+    <method name="Ping"> </method>
+    <signal name="SIGNAL_Error"> </signal>
+    <signal name="SIGNAL_Device_State">
+        <arg name="component" type="s"/>
+        <arg name="on" type="b"/>
+    </signal>
+    <signal name="SIGNAL_Device_Defaut">
+        <arg name="component" type="s"/>
+        <arg name="active" type="b"/>
+    </signal>
+    <signal name="SIGNAL_Device_Voltage">
+        <arg name="component" type="s"/>
+        <arg name="value" type="d"/>
+    </signal>
+    <signal name="SIGNAL_AllOn_True"> </signal>
+    <signal name="SIGNAL_AllOn_False"> </signal>
+    <signal name="SIGNAL_AllOff_True"> </signal>
+    <signal name="SIGNAL_AllOff_False"> </signal>
+    <signal name="SIGNAL_Defaut_Active"> </signal>
+    <signal name="SIGNAL_Defaut_NonActive"> </signal>
+</interface>
+</node>
+

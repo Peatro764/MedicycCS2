@@ -1,0 +1,6 @@
+<RCC>
+<qresource prefix="/">
+    <file>sql/createProcessTables.sql</file>
+    <file>sql/fillProcessTables.sql</file>
+ </qresource>
+</RCC>

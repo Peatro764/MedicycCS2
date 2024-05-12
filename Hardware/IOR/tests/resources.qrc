@@ -1,0 +1,7 @@
+<RCC>
+<qresource prefix="/">
+    <file>sql/createIORTables.sql</file>
+    <file>sql/fillIORData.sql</file>
+    <file>sql/fillTestData.sql</file>
+ </qresource>
+</RCC>

@@ -1,0 +1,23 @@
+*** QWT ***
+1) install
+qmake qwt.pro
+make
+make install
+2)
+in .bashrc
+export QWT_ROOT=/usr/local/qwt-6.2.0/
+export QT_PLUGIN_PATH="${QWT_ROOT}/plugins:$QT_PLUGIN_PATH"
+3)
+qmake -set QMAKEFEATURES ${QWT_ROOT}/features
+
+
+*** TOUCHSCREENS ***
+Touch screen howto
+
+ps fax | grep eGTouch
+run deamon
+sudo ./eGTouchD
+
+run calibration
+sudo ./eGTouchU 
+

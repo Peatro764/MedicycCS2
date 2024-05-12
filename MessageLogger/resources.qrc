@@ -1,0 +1,6 @@
+<RCC>
+<qresource prefix="/">
+    <file>sql/createTables.sql</file>
+    <file>sql/fillTestData.sql</file>
+ </qresource>
+</RCC>

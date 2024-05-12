@@ -1,0 +1,11 @@
+[Unit]
+Description=Run touchscreen driver at startup
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/bin/bash eGTouchD
+TimeoutStartSec=0
+
+[Install]
+WantedBy=default.target

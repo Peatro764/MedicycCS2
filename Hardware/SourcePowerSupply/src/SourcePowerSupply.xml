@@ -1,0 +1,40 @@
+<node name="/medicyc/cyclotron/sourcepowersupply">
+<interface name="medicyc.cyclotron.SourcePowerSupplyInterface">,
+    <method name="Configure">
+        <arg name="value" type="d"/>
+    </method>
+    <method name="Startup"> </method>
+    <method name="Shutdown"> </method>
+    <method name="SwitchOn"> </method>
+    <method name="SwitchOff"> </method>
+    <method name="Interrupt"> </method>
+    <method name="Increment">
+        <arg name="nsteps" type="i"/>
+    </method>
+    <method name="Decrement">
+        <arg name="nsteps" type="i"/>
+    </method>
+    <method name="UpdateDesiredValue">
+        <arg name="value" type="d"/>
+    </method>
+    <signal name="SIGNAL_Error">
+        <arg name="message" type="s"/>
+    </signal>
+    <signal name="SIGNAL_DemandForConfiguration"> </signal>
+    <signal name="SIGNAL_On"> </signal>
+    <signal name="SIGNAL_Off"> </signal>
+    <signal name="SIGNAL_Local"> </signal>
+    <signal name="SIGNAL_Remote"> </signal>
+    <signal name="SIGNAL_OnTarget"> </signal>
+    <signal name="SIGNAL_OffTarget"> </signal>
+    <signal name="SIGNAL_Voltage">
+        <arg name="value" type="d"/>
+    </signal>
+    <signal name="SIGNAL_Current">
+        <arg name="value" type="d"/>
+    </signal>
+    <signal name="SIGNAL_RegulatedParamValue">
+        <arg name="value" type="d"/>
+    </signal>
+</interface>
+</node>

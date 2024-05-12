@@ -1,0 +1,37 @@
+<node name="/medicyc/cyclotron/electrometer">
+<interface name="medicyc.cyclotron.ElectrometerInterface">,
+<method name="Ping"> </method>
+<method name="SetRange">
+         <arg name="value" type="d"/>
+</method>
+<method name="SetZero"> </method>
+<method name="RemoveZero"> </method>
+<method name="ReadRange"> </method>
+<method name="RAZ"> </method>
+<signal name="SIGNAL_ErrorMessage">
+	<arg name="message" type="s"/>
+    </signal>
+    <signal name="SIGNAL_Connected"> </signal>
+    <signal name="SIGNAL_Disconnected"> </signal>
+    <signal name="SIGNAL_ReplyReceived"> </signal>
+    <signal name="SIGNAL_Measurement">
+      <arg name="timestamp" type="d"/>
+      <arg name="value" type="d"/>
+      <arg name="ol" type="b"/>
+    </signal>
+    <signal name="SIGNAL_CurrentRange">
+	<arg name="value" type="d"/>
+    </signal>
+    <signal name="SIGNAL_Mean">
+	<arg name="value" type="d"/>
+    </signal>
+<signal name="SIGNAL_StdDev">
+	<arg name="value" type="d"/>
+    </signal>
+<signal name="SIGNAL_Zero">
+	<arg name="value" type="d"/>
+    </signal>
+<signal name="SIGNAL_ZeroRemoved"> </signal>  
+<signal name="SIGNAL_ZeroForcedRemoved"> </signal>      
+</interface>
+</node>

@@ -1,0 +1,20 @@
+<node name="/medicyc/cyclotron/ior">
+<interface name="medicyc.cyclotron.IORInterface">,
+    <method name="Ping"> </method>
+    <method name="ReadChannelValue">
+        <arg name="channel" type="s" direction="in"/>
+    </method>
+    <signal name="SIGNAL_Connected"> </signal>
+    <signal name="SIGNAL_Disconnected"> </signal>
+    <signal name="SIGNAL_ReceivedChannelValue">
+        <arg name="channel" type="s"/>
+        <arg name="state" type="b"/>
+    </signal>
+    <signal name="SIGNAL_IOError">
+        <arg name="message" type="s"/>
+    </signal>
+    <signal name="SIGNAL_IOLoad">
+        <arg name="load" type="d"/>
+    </signal>
+</interface>
+</node>

@@ -1,0 +1,6 @@
+<RCC>
+<qresource prefix="/">
+    <file>sql/createHFTables.sql</file>
+    <file>sql/fillHFData.sql</file>
+ </qresource>
+</RCC>

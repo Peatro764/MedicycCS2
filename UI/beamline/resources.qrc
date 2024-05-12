@@ -1,0 +1,10 @@
+<RCC>
+<qresource prefix="/">
+    <file>sounds/item_inserted.wav</file>
+    <file>sounds/item_extracted.wav</file>
+    <file>sounds/beam_delivered.wav</file>
+    <file>sounds/classic_alarm.wav</file>
+    <file>sounds/blaster.wav</file>
+    <file>sounds/DoigtTournant.wav</file>
+</qresource>
+</RCC>

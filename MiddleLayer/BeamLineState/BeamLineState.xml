@@ -1,0 +1,25 @@
+<node name="/medicyc/cyclotron/middlelayer/beamline">
+<interface name="medicyc.cyclotron.middlelayer.BeamLineStateInterface">,
+    <signal name="SIGNAL_CFState">
+        <arg name="name" type="s"/>
+        <arg name="extracted" type="b"/>
+    </signal>
+    <signal name="SIGNAL_QZState">
+        <arg name="name" type="s"/>
+        <arg name="extracted" type="b"/>
+    </signal>
+    <signal name="SIGNAL_DTState">
+        <arg name="extracted" type="b"/>
+    </signal>
+    <signal name="SIGNAL_GuillotineState">
+        <arg name="extracted" type="b"/>
+    </signal>
+    <signal name="SIGNAL_DiaphragmeState">
+        <arg name="extracted" type="b"/>
+    </signal>
+    <signal name="SIGNAL_DipoleState">
+        <arg name="name" type="s"/>
+        <arg name="on" type="b"/>
+    </signal>
+</interface>
+</node>
